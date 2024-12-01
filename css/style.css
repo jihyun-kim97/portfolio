@@ -1,0 +1,463 @@
+@charset "utf-8";
+
+@import url('https://fastly.jsdelivr.net/npm/galmuri@latest/dist/galmuri.css');
+
+
+:root {
+    --main-font-style: 'DOSMyungjo';
+    --inner--font-style: 'Galmuri';
+    --test--font-style: "Press Start 2P", system-ui;
+    --modal-inner-color: #C0C0C0;
+    --inner-title-color: linear-gradient(90deg, #1085D2 0%, #00007B 100%);
+}
+
+body {}
+
+
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+
+.modal .inner {
+    width: 570px;
+    height: 303px;
+    background: var(--modal-inner-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal .inner .title {
+    width: 98%;
+    height: 42px;
+    background: var(--inner-title-color);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+
+.modal .inner .title p {
+    color: #fff;
+}
+
+.modal .inner .title button {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+}
+
+
+.modal .inner .title button span {
+    /*     background: #22B14C; */
+    align-self: center;
+
+}
+
+.modal .inner .txt {
+    width: 509px;
+    height: 82px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.modal .inner .txt img {}
+
+.modal .inner .txt p {
+    font-size: 30px;
+}
+
+.modal .inner a {
+    display: flex;
+    width: 160px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    background: #ccc;
+    margin-bottom: 20px;
+    box-shadow: -1px -1px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DBDBDB inset;
+    font-size: 30px;
+}
+
+
+
+/* intro */
+
+.intro {
+    width: 100%;
+    height: 100vh;
+    /*   background: rgba(105, 103, 103, 0.50); */
+    position: relative;
+
+}
+
+
+
+
+.intro .click {
+    position: fixed;
+    right: 30px;
+    top: 120px;
+    cursor: pointer;
+    transform: translateX(-50%);
+    /* 정확히 중앙에 위치 */
+    animation: click_ani 3s ease-in-out infinite;
+    /* 애니메이션 적용 */
+    cursor: pointer;
+}
+
+@keyframes click_ani {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    25% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    75% {
+        transform: translateX(-50%) translateY(10px);
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.question {
+    position: fixed;
+    left: 10px;
+    bottom: 50px;
+    cursor: pointer;
+}
+
+
+
+ul.toolbar {
+    width: 100%;
+    height: 172px;
+    background: rgba(255, 255, 255, 0.2);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 8px solid #ccc;
+}
+
+
+ul.toolbar>li {
+    height: 80%;
+    border-right: 2px solid #ccc;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    /* flex: 1; */
+    /*     align-self: center; */
+}
+
+
+
+.paste,
+.image,
+.shape,
+.size {
+    /* margin-top: 20px; */
+}
+
+.paste {
+    /*     width: 198px;
+    height: 143px;
+    margin-left: 10px; */
+}
+
+.image {
+    /*     width: 182px;
+    height: 143px; */
+}
+
+.equipment {
+    /*     width: 103px;
+    height: 128px;
+    margin-top: 34px; */
+}
+
+.brush {
+    /*     width: 67px;
+    height: 110px;
+    margin-top: 15px; */
+
+}
+
+.shape {
+    /*     width: 376px;
+    height: 139px; */
+}
+
+.size {
+    /*     align-self: flex-start; */
+    /*     width: 53px;
+    height: 96px; */
+}
+
+
+
+
+.canvas {
+    flex: 1;
+    display: flex;
+
+}
+
+.color_sel {
+    width: 137px;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.color1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 67px;
+    height: 110px;
+    border: 1px solid #000;
+}
+
+.color1 .box {
+    display: flex;
+    width: 53px;
+    height: 53px;
+    padding: 10px 5px;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+
+.color1 .box .col {
+    align-self: center;
+    width: 43px;
+    height: 43px;
+    background: #000;
+}
+
+.color1 .txt {
+    text-align: center;
+}
+
+.color2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    width: 67px;
+    height: 110px;
+    /*     border: 1px solid #000; */
+}
+
+.color2 .box {
+    display: flex;
+    width: 53px;
+    height: 53px;
+    padding: 10px 5px;
+    gap: 10px;
+    border: 1px solid #ccc;
+}
+
+.color2 .box .col {
+    align-self: center;
+    width: 43px;
+    height: 43px;
+    background: #fff;
+}
+
+.color2 .txt {
+    text-align: center;
+}
+
+
+.canvas .color_palete {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(10, 30px);
+    /* 5열로 설정 */
+    grid-template-rows: repeat(3, 30px);
+    /* 6행으로 설정 */
+    gap: 10px;
+    /* 색상 박스 간의 간격 */
+}
+
+.canvas .color_palete li {
+    width: 33px;
+    height: 33px;
+    margin: 3px;
+    padding: 3px;
+    background: #ccc;
+    border: 3px solid #eee;
+    text-indent: -9999px;
+    cursor: pointer;
+
+}
+
+.canvas .color_palete li.black {
+    background: #000;
+}
+
+.canvas .color_palete li.medium_gray {
+    background: #7F7F7F;
+}
+
+.canvas .color_palete li.dark_red {
+    background: #880015;
+}
+
+.canvas .color_palete li.red {
+    background: #ED1C24;
+}
+
+.canvas .color_palete li.orange {
+    background: #FF7F27;
+}
+
+.canvas .color_palete li.bright_yellow {
+    background: #FFF200;
+}
+
+.canvas .color_palete li.green {
+    background: #22B14C;
+}
+
+.canvas .color_palete li.bright_blue {
+    background: #00A2E8;
+}
+
+.canvas .color_palete li.light_purple {
+    background: #3F48CC;
+}
+
+.canvas .color_palete li.purple {
+    background: #A349A4;
+}
+
+/* next */
+.canvas .color_palete li.white {
+    background: #FFFFFF;
+}
+
+.canvas .color_palete li.light_gray {
+    background: #c3c3c3;
+}
+
+.canvas .color_palete li.brown {
+    background: #B97A57;
+}
+
+.canvas .color_palete li.pink {
+    background: #FFAEC9;
+}
+
+.canvas .color_palete li.yellow {
+    background: #FFC90E;
+}
+
+.canvas .color_palete li.light_yellow {
+    background: #EFE4B0;
+}
+
+.canvas .color_palete li.bright_green {
+    background: #B5E61D;
+}
+
+.canvas .color_palete li.libht_cyan {
+    background: #99D9EA;
+}
+
+.canvas .color_palete li.blue {
+    background: #7092BE;
+}
+
+.canvas .color_palete li.light_lavender {
+    background: #C8BFE7;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.canvas .color_palete li.fff {
+    background: #fff;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .mainSvg {}
+
+
+/* wallpaper */
+
+.wallpaper {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/wallpaper_background_img.png);
+}
