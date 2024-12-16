@@ -1,0 +1,978 @@
+@charset "utf-8";
+
+:root {
+    --main-bg-color: #E7E1D5;
+    --main-font-style: "Nanum Gothic", sans-serif;
+    --sub-font-style: "Nanum Myeongjo", serif;
+    --txt-font-style: "Noto Serif KR", serif;
+    --maru-font-style: 'MaruBuri';
+    --namsan-font-style: 'SeoulNamsanM';
+    --hangang-font-style: 'SeoulHangangM';
+    --book-font-style: 'BookkMyungjo-Bd'
+}
+
+body {
+    font-family: "Nanum Gothic", sans-serif;
+    background: var(--main-bg-color);
+}
+
+.container {
+    width: 1360px;
+    margin: 0 auto;
+    /* background: var(--main-bg-color); */
+}
+
+
+
+/* header */
+.main_all {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: relative;
+}
+
+.main_all header {
+    width: 40%;
+    height: 100%;
+    background: #C6BEAF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main_all header .h_all {
+    width: 30%;
+    /* background: #ccc; */
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main_all header .h_all h1 {
+    width: 70%;
+    /* height: 100px; */
+
+}
+
+.main_all header .h_all h1 a {
+    display: block;
+    height: 100%;
+    height: 100%;
+    /* background: #1D251D; */
+}
+
+.main_all header .h_all h1 img {
+    width: 100%;
+    width: 100%;
+    object-fit: contain;
+    /* background: #ccc; */
+}
+
+/* .main_all header .ham {
+    width: 30px;
+    height: 30px;
+    margin: 35px 0;
+   align-self: flex-start; 
+     background: #1B341B; 
+}
+ */
+.main_all header nav {
+    padding: 55px 0;
+    width: 85px;
+    /*  background: #ccc; */
+    height: 500px;
+    /* background: red; */
+}
+
+.main_all header nav ul.gnb {
+    width: 100%;
+    height: 100%;
+    /* background: lavender; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+}
+
+.main_all header nav ul.gnb li {}
+
+.main_all header nav ul.gnb li a {
+    font-size: 1.875rem;
+    font-family: "Nanum Myeongjo", serif;
+    font-weight: 400;
+    color: #fff;
+}
+
+.main_all .main_visual {
+    position: absolute;
+    width: 60%;
+    height: 100%;
+    right: 0;
+    top: 0;
+}
+
+.main_all .main_visual .menu {
+    display: none;
+}
+
+.main_all .main_visual .main_slide_wrap {
+    width: 100%;
+    height: 100%;
+}
+
+.main_all .main_visual .slide {
+    width: 100%;
+    height: 100%;
+}
+
+.main_all .main_visual .slide li {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+    font-family: var(--sub-font-style);
+    background-position: center center;
+}
+
+.main_all .main_visual .slide li.slide1 {
+    background-image: url(../img/main_visual.png);
+}
+
+
+.main_all .main_visual .slide li.slide1 a p {
+    font-size: 1.875rem;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 2.7px;
+    text-align: center;
+}
+
+.main_all .main_visual .slide li.slide2 {
+    background-image: url(../img/main_visual2.png);
+    background-color: #bbb;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding-bottom: 80px;
+}
+
+.main_all .main_visual .slide li.slide2 img {}
+
+.main_all .main_visual .slide li.slide3 {
+    background-image: url(../img/main_visual3.png);
+    background-color: #000;
+}
+
+.main_all .main_visual .slide li.slide3 a {
+    width: 377px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: #FFF;
+    font-family: var(--sub-font-style);
+    font-size: 3.125rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 50px;
+}
+
+
+.main_all .main_visual .slide li.slide3 .txt_top {}
+
+.main_all .main_visual .slide li.slide3 .txt_bottom {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+}
+
+.main_all .main_visual .slide li.slide3 .txt_bottom img {
+    width: 119px;
+    height: 70px;
+}
+
+.main_all .main_visual .slide li.slide3 .txt_bottom p {
+    margin: 20px 0 0 10px;
+}
+
+.swiper-pagination-bullet-active {
+    background: #ccc;
+}
+
+.rest {
+    width: 100%;
+    /*  height: 2500px; */
+    height: 300vh;
+    /*     background: #ccc; */
+    background: #847D70;
+    display: flex;
+    justify-content: center;
+    padding: 20rem 0 10rem;
+    position: relative;
+    display: grid;
+    place-items: center;
+    
+}
+
+.rest .container {
+    max-width: 1728px;
+    /* 최대 너비 지정 */
+    width: 100%;
+    /* 화면에 맞춰 조정 */
+    height: 200vh;
+    display: flex;
+    justify-content: space-between;
+    /*     padding: 0 2rem;
+ */
+}
+
+.rest .photograpy {
+    max-width: 800px;
+    width: 90%; /* 반응형을 위해 상대적 너비 설정 */
+    height: 100%;
+
+    margin: 5rem 0;
+}
+
+.rest .tape {
+margin: 100px 0 0 300px;
+/*         position: absolute;
+        top: 12%;
+        left: 12%; 
+        background: #ccc;
+ /*    margin: 100px 0 0 300px; */
+    z-index: 20;
+
+}
+
+.rest .img_box {
+    height: 2000px;
+    background: #000;
+}
+
+.rest .img_box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .6s;
+    filter: grayscale(100%);
+
+}
+
+.rest .img_box img:hover {
+    filter: grayscale(0);
+}
+
+.rest .img_box ul {
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    /* 여백 설정 */
+    justify-content: space-around;
+}
+
+.rest .img_box ul li {
+    width: 40%;
+    height: 20rem;
+    /* rem 단위 사용 */
+    background: #8E8E8E;
+    margin: 10px;
+}
+
+
+.rest .img_box ul li:nth-child(2n) {
+    height: 22rem;
+}
+
+.rest .img_box ul li:nth-child(3n) {
+    height: 24rem;
+    /*  align-self: flex-end; */
+}
+
+/* 텍스트 박스 */
+
+.rest .txt {
+    font-family: "Nanum Myeongjo", serif;
+    width: 50%;
+    /* 반응형을 위해 상대적 너비 설정 */
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    position: sticky;
+    top: 2rem;
+    /* 상단에서 2rem 고정 */
+    padding-left: 2rem;
+    color: #fff;
+    z-index: 10;
+    /*     background: #ccc; */
+
+}
+
+.rest .txt .title {}
+
+.rest .txt h2 {
+    color: #333;
+    font-size: 3.75rem;
+    /* 60px을 rem으로 변환 */
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.rest h2 b {
+    font-size: 6.25rem;
+    /* 100px을 rem으로 변환 */
+    font-weight: 700;
+}
+
+.rest p {
+    font-size: 1.875rem;
+    /* 30px을 rem으로 변환 */
+    font-weight: 400;
+    line-height: 5rem;
+    /* 80px을 rem으로 변환 */
+
+}
+
+.medi {
+    width: 100%;
+    padding: 50px 0;
+    /* height: 1472px; */
+}
+
+.medi article {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    padding: 50px;
+    background-repeat: no-repeat;
+    background-size: center;
+}
+
+.medi article .txt {
+    width: 580px;
+    /* height: 120px; */
+    color: #333;
+    font-family: var(--txt-font-style);
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 150px;
+}
+
+.medi article.incense {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    background-image: url(../img/incen_bg.png);
+    background-position: right 50px;
+}
+
+.medi article.meditation {
+    width: 100%;
+    height: 600px;
+    margin-top: 125px;
+    background-image: url(../img/medi_bg.png);
+    background-position: left 50px;
+
+}
+
+.medi article.incense .txt {
+    margin-left: 80px;
+}
+
+a.bt {
+    display: flex;
+    width: 200px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 0;
+    background: #fff;
+    margin-top: 80px;
+}
+
+a.bt p {
+    color: #000;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+
+/* .meditation .txt {
+    width: 555px;
+    height: 120px;
+} */
+
+/* .meditation .txt p {
+    color: #333;
+    font-family: 'MaruBuri';
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 40px;
+}
+
+.meditation .bt {
+    position: absolute;
+    left: 500px;
+    bottom: 90px;
+    padding: 10px 31px;
+    align-items: center;
+    border-radius: 20px 20px 20px 20px;
+    border: 0;
+}
+
+.meditation .bt p {
+    color: #000;
+    font-family: "Noto Sans KR", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: normal;
+} */
+
+
+/* tea */
+
+.tea {
+    /*   width: 100%;
+    */
+    height: 100vh;
+    background: #6C6860;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.tea .banner {
+    width: 100%;
+    height: 600px;
+    background: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    position: relative;
+
+}
+
+
+.tea .banner .teaimg {
+    width: 60%;
+    height: 100%;
+}
+
+
+
+
+
+.tea .banner .txt {
+    width: 40%;
+    height: 310px;
+    padding-left: 18px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+
+.tea .banner .txt h2 {
+    width: 328px;
+    height: 120px;
+    font-family: 'NotoSerifKR';
+    font-size: 2.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+    /*     margin: 120px 0 0 43px; */
+}
+
+.tea .banner .txt h2 .underlined {
+    /*     padding-bottom: 5px;
+    position: relative; */
+
+}
+
+.tea .banner .txt::after {
+    content: "";
+    /* 가상 요소로 텍스트 아래 선을 추가 */
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 250px;
+    height: 3px;
+    background-color: #CA8069;
+}
+
+.tea .banner .txt h2 .color {
+    color: #B25013;
+    text-align: center;
+}
+
+
+.tea .banner .txt p {
+    width: 450px;
+    /*    margin: 50px 0 0 43px; */
+    color: #333;
+    font-size: 1.25rem;
+    font-family: 'NotoSerifKR';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    margin-top: 50px;
+}
+
+.tea .banner .bt {
+    width: 153px;
+    height: 62px;
+    position: absolute;
+    right: 50px;
+    bottom: 20px;
+    color: #000;
+    text-align: center;
+    font-family: 'YESMyoungjo-Regular';
+    font-size: 1.5625rem;
+    font-weight: 400;
+    line-height: normal;
+    transition: .5s;
+
+}
+
+.tea .banner .bt::before {
+    content: '';
+    width: 72px;
+    height: 62px;
+    display: block;
+    background-image: url(../img/more_hover_img.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    transition: .6s;
+    opacity: 0;
+}
+
+.tea .banner .bt:hover::before {
+
+    opacity: 1;
+}
+
+.tea .banner .bt a {
+    position: relative;
+}
+
+
+
+.walk {
+    width: 100%;
+    height: 1133px;
+    background-image: url(../img/con4_container_bg.png);
+    display: flex;
+    overflow: hidden;
+    position: relative;
+}
+
+.walk .container {
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+.walk .item {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    /*    background: #ccc; */
+
+}
+
+.walk .next_buttton {
+    width: 62px;
+    height: 62px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    z-index: 100;
+    cursor: pointer;
+    background: #fff;
+    border-radius: 10px;
+    border: none;
+}
+
+.walk .item .left_section {
+    width: 45%;
+    height: 500px;
+    background: var(--main-bg-color);
+    flex-shrink: 0;
+    margin-right: 10px;
+}
+
+.walk .item .left_section .txt {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    height: 500px;
+    font-family: var(--txt-font-style);
+    display: flex;
+    justify-content: space-around;
+    padding-left: 70px;
+
+}
+
+.walk .item .left_section .txt h2 {
+    color: #828282;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+.walk .item .left_section .txt h1 {
+    color: #000;
+    font-size: 2.125rem;
+    font-weight: 700;
+    line-height: 50px;
+    letter-spacing: 1.52px;
+
+}
+
+.walk .item .left_section .txt p {
+    color: #6D6D6D;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.75px;
+}
+
+.walk .item .left_section .txt a {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: 30px;
+    /*     background: #ccc; */
+    color: #555;
+    font-family: "Nanum Gothic", sans-serif;
+    font-size: 1.125rem;
+    font-weight: 400;
+
+}
+
+.walk .item .left_section .txt a span {
+    font-size: 1rem;
+    padding: 0 0 2px 10px;
+
+}
+
+
+.walk .item .left_section .txt a:hover {}
+
+.right_section {
+    width: 55%;
+    height: 500px;
+}
+
+.walk .item .right_section .card_all {
+    display: flex;
+    width: 70%;
+    height: 100%;
+}
+
+.walk .item .right_section .img_card {
+    width: 100% !important;
+    height: 100%;
+    overflow: hidden;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.walk .item .right_section .img_card .overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.50);
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+    /* 텍스트 숨김 */
+    transition: 1s;
+}
+
+.walk .item .right_section .img_card .overlay:hover {
+    opacity: 1;
+}
+
+.walk .item .right_section .img_card .overlay .txt {
+    width: 100%;
+    height: 60%;
+    color: #FFF;
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.walk .item .right_section .img_card .overlay .txt h2 {
+    text-align: center;
+    font-family: var(--namsan-font-style);
+    font-size: 1.75rem;
+    font-weight: 400;
+}
+
+.walk .item .right_section .img_card .overlay .txt p {
+    color: #FFF;
+    text-align: center;
+    font-family: var(--txt-font-style);
+    font-size: 1.25rem;
+    line-height: 30px;
+    /* font-weight: normal; */
+    line-height: 30px;
+    /* 150% */
+}
+
+.walk .item .right_section .img_card .overlay .txt a {
+    font-size: 1rem;
+    text-align: right;
+
+}
+
+.walk .item .right_section .img_card .overlay .txt a span {
+    display: inline-block;
+    margin: 2px 0 0 5px;
+    color: #ccc;
+}
+
+.walk .item .right_section .img_card .overlay:hover {
+    display: in;
+}
+
+.walk .item .right_section .img_card1 {
+    background-image: url(../img/namsan.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.walk .item .right_section .img_card2 {
+    background-image: url(../img/subway.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.walk .item .right_section .img_card3 {
+    background-image: url(../img/gogung.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.swiper-horizontal>.swiper-pagination-progressbar,
+.swiper-pagination-progressbar.swiper-pagination-horizontal,
+.swiper-pagination-progressbar.swiper-pagination-vertical.swiper-pagination-progressbar-opposite,
+.swiper-vertical>.swiper-pagination-progressbar.swiper-pagination-progressbar-opposite {
+    width: 100%;
+    height: var(--swiper-pagination-progressbar-size, 4px);
+    left: 0;
+    top: auto;
+    bottom: 0;
+}
+
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+    background: #8E8E8E;
+}
+
+.yoga {
+    width: 100%;
+    /* height: 100vh; */
+    background: #CDC4B3;
+
+}
+
+.yoga>.container {
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+
+
+}
+
+.yoga .con_top {
+    width: 100%;
+    height: 650px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+
+.yoga .con_top .con_left {
+    width: 20%;
+    height: 80%;
+    display: flex;
+    align-self: center;
+}
+
+.yoga .con_top .con_left img {
+    width: 100%;
+    height: 80%;
+}
+
+.yoga .con_top .con_right {
+    width: 80%;
+    height: 100%;
+}
+
+.yoga .con_top .con_right img {
+    width: 100%;
+    height: 100%;
+}
+
+.yoga .con_bottom {
+    /*     background: #ccc; */
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 75px 0 100px 0;
+
+}
+
+.yoga .con_bottom .con_left img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-self: center;
+}
+
+.yoga .con_bottom .con_left img {
+    width: 100%;
+    height: 100%;
+}
+
+.yoga .con_bottom .con_right {
+    width: 50%;
+    height: 310px;
+    margin-top: 78px;
+    font-family: var(--txt-font-style);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.yoga .con_bottom .con_right h2 {
+    /* width: 522px; */
+    color: #1B341B;
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+}
+
+.yoga .con_bottom .con_right p {
+    /* width: 369px; */
+    color: #1D251D;
+    font-size: 1.25rem;
+    font-weight: 400;
+    line-height: 38px;
+    /* 190% */
+}
+
+.yoga .con_bottom .con_right a {
+    width: 240px;
+    height: 60px;
+    border-radius: 50px;
+    background: #3A593A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 285px;
+
+}
+
+.yoga .con_bottom .con_right a p {
+    color: #FFF;
+    font-family: "Noto Sans KR";
+    font-size: 1.25rem;
+    font-weight: 350;
+    margin-right: 10px;
+}
+
+.yoga .con_bottom .con_right a span {
+    margin-top: 2px;
+    text-align: center;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    position: relative;
+
+}
+
+footer .logo {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+}
+
+footer .logo a {}
+
+footer .copy {
+    color: #6e6e6e;
+    font-size: 1rem;
+    font-family: "Noto Sans";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+footer .sns {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    gap: 20px;
+
+
+}
+
+footer .sns .fa-instagram {
+    font-size: 1.875rem;
+    color: #B4B3B3;
+}
+
+footer .sns .fa-youtube {
+    font-size: 1.875rem;
+    color: #B4B3B3;
+}
+
+footer .sns .fa-envelope {
+    font-size: 1.875rem;
+    color: #B4B3B3;
+}

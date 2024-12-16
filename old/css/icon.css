@@ -1,0 +1,989 @@
+@charset "utf-8";
+
+:root {
+    --main-font-style: 'DOSMyungjo';
+    --inner--font-style: 'Galmuri';
+    --test--font-style: "Press Start 2P", system-ui;
+    --portit--font-style: 'DOSIyagiMedium';
+    --portit2--font-style: 'DOSSaemmul';
+    --about_me--font-style: 'DOSGothic';
+    --modal-inner-color: #C0C0C0;
+    --inner-title-color: linear-gradient(90deg, #1085D2 0%, #00007B 100%);
+
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.back_home {
+    position: fixed;
+    right: 80px;
+    bottom: 90px;
+    z-index: 100;
+    /*     background: #C0C0C0; */
+}
+
+.back_home a {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.back_home p {
+    font-size: 20px;
+    font-family: var(--main-font-style);
+    color: #fff;
+}
+
+
+.modal {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    display: none;
+}
+
+.modal .inner {
+    width: 570px;
+    height: 303px;
+    background: var(--modal-inner-color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: -1px -1px 0px 0px #000 inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DBDBDB inset;
+}
+
+.modal .inner .title {
+    width: 98%;
+    height: 42px;
+    background: var(--inner-title-color);
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px 0 10px;
+}
+
+.modal .inner .title p {
+    color: #fff;
+}
+
+.modal .inner .title button {
+    width: 30px;
+    height: 30px;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+
+}
+
+
+.modal .inner .title button span {
+    /*     background: #22B14C; */
+    align-self: center;
+
+}
+
+.modal .inner .txt_box {
+    width: 565px;
+    height: 252px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .inner .txt_box .txt {
+    width: 394px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.modal .inner .txt p {
+    font-size: 30px;
+}
+
+/* wallpaper */
+
+#wallpaper {
+    width: 100%;
+    height: 100vh;
+    background: url(../img/wallpaper_background_img.png);
+    position: relative;
+}
+
+#wallpaper .malware {
+    position: absolute;
+    right: 80px;
+    bottom: 30%;
+}
+
+#wallpaper .malware a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#wallpaper .left_menu {
+    position: absolute;
+    top: 100px;
+    left: 80px;
+    width: 100px;
+    height: 250px;
+    /*     background: #ccc; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+#wallpaper .right_menu {
+    position: absolute;
+    top: 105px;
+    right: 80px;
+    width: 100px;
+    height: 271px;
+    /*    background: #ccc; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+
+
+#wallpaper .taskbar {
+    width: 100%;
+    height: 50px;
+    background: var(--modal-inner-color);
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+}
+
+#wallpaper .taskbar .icons {
+    width: 204px;
+    height: 45px;
+    margin-left: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#portfolio {
+    width: 100%;
+    height: 110vh;
+    background: url(../img/portfolio_page_bg.png);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* por_contents */
+
+.por_contents {
+    width: 825px;
+    height: 626px;
+    background: #c0c0c0;
+    /*    margin-top: 50px; */
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* top_bar  */
+
+.por_contents .top_bar {
+    width: 99%;
+    height: 25px;
+    background: linear-gradient(90deg, #000080 0%, #1084D0 100%);
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #DFDFDF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #FFF inset;
+    display: flex;
+    justify-content: center;
+    margin: 2px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+}
+
+.por_contents .top_bar .bt {
+    width: 60px;
+    height: 18px;
+    margin-top: 2px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.por_contents .top_bar .bt .l_bt {
+    width: 80%;
+    height: 100%;
+    background: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.down,
+.lar {
+    width: 100%;
+    height: 100%;
+    background: #C0C0C0;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.down img {
+    width: 10px;
+    height: 10px;
+    margin-top: 2px;
+}
+
+.lar img {
+    width: 10px;
+    height: 10px;
+}
+
+.close_t {
+    width: 24px;
+    height: 18px;
+    background: #C0C0C0;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    margin-top: 2px;
+    margin-right: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.close_t img {
+    width: 10px;
+    height: 10px;
+
+}
+
+
+/* home */
+
+.por_contents .home {
+    width: 42px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #C0C0C0;
+    box-shadow: -2px 0px 0px 0px rgba(38, 38, 38, 0.50) inset, -1px 0px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, 2px 2px 0px 0px #DFDFDF inset;
+    margin: 8px;
+    margin-bottom: 0;
+}
+
+/* inner */
+
+.por_contents .inner {
+    width: 810px;
+    height: 557px;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    align-self: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* left_sec */
+
+.por_contents .inner .left_sec {
+    width: 153px;
+    height: 539px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-family: 'DOSGothic';
+}
+
+.por_contents .inner .left_top>li {
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.por_contents .inner .left_top>li::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #888;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.btn {
+    cursor: pointer;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    transition: .6s;
+}
+
+.btn.on {
+    box-shadow: -1px -1px 0px 0px #FFF inset, 1px 1px 0px 0px #0A0A0A inset, -2px -2px 0px 0px #DFDFDF inset, 2px 2px 0px 0px #808080 inset;
+}
+
+.email {
+    width: 100%;
+    height: 53px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px;
+    background: var(--modal-inner-color);
+    margin-top: 10px;
+
+}
+
+.email .txt {
+    font-size: 13px;
+}
+
+.create {
+    margin-top: 14px;
+    width: 100%;
+    height: 59px;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.create .recents_bt {
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create .recents_bt .txt {
+    width: 107px;
+    height: 12px;
+}
+
+.create .drafts_bt {
+    width: 100%;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    padding: 6px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.create .drafts_bt .txt {
+    width: 107px;
+    height: 12px;
+}
+
+.left_bottom {
+    width: 100%;
+    height: 375px;
+    background: #fff;
+}
+
+.fav {
+    width: 100px;
+    height: 140px;
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.fav p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.fav_icons {
+    width: 67px;
+    height: 125px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+
+.fav_icons img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.team {
+    width: 67px;
+    height: 55px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px;
+}
+
+.team p {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+.team .team_icons {
+    width: 100%;
+    height: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.team_icons img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.right_sec {
+    width: 619px;
+    height: 530px;
+    /*     background: #fff; */
+    margin-top: 10px;
+}
+
+.right_top {
+    width: 100%;
+    height: 127px;
+    /*  background: palegoldenrod; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right_top .search {
+    width: 263px;
+    height: 28px;
+    background: #fff;
+    box-shadow: -1px -1px 0px 0px #FFF inset, 1px 1px 0px 0px #0A0A0A inset, -2px -2px 0px 0px #DFDFDF inset, 2px 2px 0px 0px #808080 inset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.right_top .search img {
+    width: 16px;
+    height: 16px;
+    object-fit: cover;
+}
+
+.right_top .search p {
+    width: 230px;
+    height: 12px;
+    font-size: 15px;
+    font-family: 'DOSMyungjo';
+    font-style: normal;
+    font-weight: 500;
+}
+
+.right_top .view {
+    width: 100%;
+    height: 86px;
+    /*     background: #eee; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.right_top .view>h2 {
+    width: 100%;
+    height: 22px;
+    /*     background: yellow; */
+    color: #222;
+    font-style: normal;
+    font-weight: 400;
+    font-family: var(--portit--font-style);
+    font-size: 15px;
+    display: flex;
+    align-items: flex-start;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    position: relative;
+
+}
+
+
+.right_top .view>h2::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #888;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+
+.right_top .view .work {
+    width: 619px;
+    height: 55px;
+    /*  background: papayawhip; */
+    border-bottom: 1px solid #fff;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+
+.right_top .view .work::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background: #888;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.work_button {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.work_button .de_file,
+.jam_file,
+.import {
+    width: 200px;
+    height: 44px;
+    background: var(--modal-inner-color);
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.work_button .icon {
+    width: 20px;
+    height: 20px;
+}
+
+.work_button .plus {
+    width: 12px;
+    height: 17px;
+}
+
+.work_button .txt {
+    width: 150px;
+    height: 40px;
+    /* background: #aaa; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-family: var(--portit2--font-style);
+
+}
+
+.work_button .txt h2 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.work_button .txt p {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.de_file .txt {}
+
+
+ul.thumb {
+    margin-top: 13px;
+    width: 100%;
+    height: 386px;
+    /*  background: #aaa; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-right: 10px;
+
+}
+
+ul.thumb li {
+    width: 200px;
+    height: 190px;
+    background: #eee;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #FFF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #DFDFDF inset;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+ul.thumb li img {
+    width: 188px;
+    height: 140px;
+    /*   background: #fff; */
+}
+
+ul.thumb li .txt_box {
+    width: 90%;
+    height: 32px;
+    /*   background: #888; */
+    align-self: flex-start;
+    margin-left: 8px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+ul.thumb li .txt_box img {
+    width: 25px;
+    height: 25px;
+}
+
+ul.thumb li .txt_box .txt {
+    width: 90%;
+    height: 27px;
+    /*     background: #C0C0C0; */
+    display: flex;
+    flex-direction: column;
+    padding-left: 5px;
+    font-family: var(--portit2--font-style);
+
+}
+
+ul.thumb li .txt_box .txt p {
+    font-size: 14px;
+
+}
+
+ul.thumb li .txt_box .txt span {
+    font-size: 11px;
+}
+
+
+/* about_me */
+
+#about_me {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    background: linear-gradient(180deg, #FFF 0%, #0D2643 100%);
+    ;
+}
+
+#about_me .my_image {
+    position: absolute;
+    top: 150px;
+    left: 200px;
+}
+
+#about_me .my_image img {
+    width: 514px;
+    height: 657px;
+    object-fit: cover;
+
+}
+
+
+
+.detect {
+    position: absolute;
+    top: 95px;
+    left: 160px;
+    width: 580px;
+    height: 580px;
+    /*     opacity: 0;
+    transition: opacity  ease-in-out; */
+    /*  position: absolute;
+    top: 95px;
+    left: 160px; */
+}
+
+.detect svg {
+    width: 580px;
+    height: 580px;
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    position: absolute;
+}
+
+.detect .svg1 {
+    left: 0px;
+    top: 0px;
+    animation: ani 5s linear infinite;
+}
+
+.detect .svg2 {
+    left: 50px;
+    top: 50px;
+    animation: ani 3s 0.2s linear infinite;
+}
+
+@keyframes ani {
+    0% {
+        stroke-dashoffset: 500;
+    }
+
+    50% {
+        stroke-dashoffset: 0;
+    }
+
+    100% {
+        stroke-dashoffset: -500;
+    }
+}
+
+.detect .line {
+    height: 2px;
+    left: 580px;
+    top: 300px;
+    background: #fff;
+    position: absolute;
+    z-index: 100;
+    animation: lineAni 1s infinite;
+}
+
+@keyframes lineAni {
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 260px;
+    }
+}
+
+.detect svg rect {
+    fill: rgba(255, 0, 0, 0.2);
+}
+
+.sensor .typing_box {
+    position: absolute;
+    top: 95px;
+    right: 110px;
+    width: 800px;
+    height: 724px;
+    background: #000;
+    color: #fff;
+    font-family: var(--about_me--font-style);
+    font-weight: lighter;
+    font-size: 25px;
+    padding-left: 30px;
+    padding-top: 100px;
+    display: flex;
+    /* justify-content: center; */
+
+
+
+}
+
+.job {
+    width: 160px;
+    height: 40px;
+    background: #000;
+    position: absolute;
+    top: 110px;
+    left: 200px;
+    border-radius: 5px 5px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.job p {
+    color: #fff;
+    font-size: 32px;
+    text-align: center;
+    font-family: var(--about_me--font-style);
+}
+
+.sensor .typing_box .my_info {
+    /* background: #C0C0C0; */
+    width: 400px;
+    height: 200px;
+}
+
+.sensor .typing_box li.mb10 {
+    margin-bottom: 50px;
+}
+
+.click_me {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+.click_me .video_background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /* 비율 유지하면서 화면 꽉 채우기 */
+}
+
+
+.fix_photo {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    background: rgba(255, 0, 0, 0.5);
+    display: none;
+}
+
+.fix_photo>#pt {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background: var(--modal-inner-color);
+    display: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.fix_photo>#pt .tit {
+    width: 790px;
+    height: 42px;
+    background: linear-gradient(90deg, #1085D2 0%, #00007B 100%);
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding-right: 10px;
+}
+
+.fix_photo>#pt .tit .menu {
+    width: 94px;
+    height: 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.fix_photo>#pt .tit .menu .down,
+.fix_photo>#pt .tit .menu .lar,
+.fix_photo>#pt .tit .menu .close {
+    width: 28px;
+    height: 28px;
+    align-self: center;
+    background: #C0C0C0;
+    box-shadow: -1px -1px 0px 0px #0A0A0A inset, 1px 1px 0px 0px #DFDFDF inset, -2px -2px 0px 0px #808080 inset, 2px 2px 0px 0px #FFF inset;
+}
+
+.fix_photo>#pt .close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fix_photo>#pt .close img {
+    /* background: #fff; */
+}
+
+.fix_photo .er_img img {
+    width: 790px;
+    height: 440px;
+    object-fit: cover;
+}
+
+.fix_photo .photo1 {
+    top: 100px;
+    right: 100px;
+}
+
+.fix_photo .photo2 {
+    top: 200px;
+    right: 150px;
+}
+
+.fix_photo .photo3 {
+    top: 300px;
+    right: 200px;
+}
+
+.fix_photo .photo4 {
+    top: 400px;
+    right: 250px;
+}
+
+.fix_photo .photo5 {
+    top: 500px;
+    right: 300px;
+}
+
+#my_skill {
+    width: 100%;
+    height: 150vh;
+    background: #000;
+    position: relative;
+}
+
+#my_skill .people {
+    position: absolute;
+    width: 80px;
+    height: 300px;
+    top: 10%;
+    left: 38%;
+}
+
+#my_skill .skill {
+    position: absolute;
+    top: 32%;
+    /* 수직 중앙 정렬 */
+    transform: translateY(-50%);
+    /* 수직 중앙 정렬을 위한 조정 */
+    animation: skill_ani 8s linear infinite;
+}
+
+@keyframes skill_ani {
+    0% {
+        transform: translateX(100%);
+        /* 요소가 화면 밖에서 시작 */
+    }
+
+    100% {
+        transform: translateX(-100%);
+        /* 요소가 화면 밖으로 이동 */
+    }
+}
